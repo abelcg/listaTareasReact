@@ -12,7 +12,6 @@ function App() {
     <Titulo></Titulo>
     <Subtitulo comision = '16i' estado = {true} />
     <FormTareas></FormTareas>
-    <ListaTareas></ListaTareas>
    </>
   );
 }

@@ -33,6 +33,7 @@ const FormTareas = () => {
             Agregar
           </button>
         </div>
+      <ListaTareas></ListaTareas>
       </form>
     </>
   );
