@@ -1,10 +1,13 @@
 import React from 'react';
 import ItemTareas from './ItemTareas';
 
-const ListaTareas = () => {
+const ListaTareas = (props) => {
     return (
         <ul className="list-group my-5">
-            <ItemTareas></ItemTareas>
+            {
+                props.arrayTareas.map((elemento, indice) => <ItemTareas key={indice} dato={elemento}></ItemTareas>)
+            }
+            
         </ul>    
     );
 };
