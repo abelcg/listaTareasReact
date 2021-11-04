@@ -20,6 +20,12 @@ const FormTareas = () => {
       setTareaIndividual('');
   };
 
+  const borrarTarea = (nombre)=> {
+     let arregloMofificado = tareas.filter((tarea)=> tarea !== nombre );
+    // console.log(arregloMofificado)
+    setTareas(arregloMofificado);
+  }
+
   return (
     //aqui va el maquetado
     <>
@@ -34,10 +40,12 @@ const FormTareas = () => {
           />
           <button className="btn btn-outline-light" type="submit">
             Agregar
-          </button>
+          </button>  
         </div>
-      <ListaTareas arrayTareas={tareas}></ListaTareas>
       </form>
+      <section className="container">
+         <ListaTareas arrayTareas={tareas} borrarTarea={borrarTarea}></ListaTareas>
+      </section>
     </>
   );
 };
